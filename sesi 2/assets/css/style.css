@@ -15,6 +15,10 @@ body {
     background: #fff;
 }
 
+body::-webkit-scrollbar {
+    width: 0;
+}
+
 /* header */
 
 header {
@@ -140,6 +144,47 @@ section {
     font-weight: 350;
     letter-spacing: 1px;
     font-size: .78rem;
+}
+
+/* portfolio */
+
+#portfolio {
+    text-align: center;
+}
+
+.portfolio-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.portfolio-card {
+    padding: 20px 0;
+}
+
+.portfolio-card img {
+    width: 200px;
+    height: 200px;
+}
+
+.portfolio-card p {
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+.portfolio-card span {
+    font-weight: 350;
+    letter-spacing: 1px;
+    font-size: .78rem;
+}
+
+/* footer */
+
+footer {
+    font-size: .78rem;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 20px;
 }
 
 /* responsive breakpoint */
