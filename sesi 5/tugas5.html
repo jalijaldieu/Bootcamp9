@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Mini E-Commerce dengan Fitur Cari & Pilih</title>
+</head>
+<body>
+
+  <h1>E-Commerce Catalog</h1>
+
+  <!-- Panel Kontrol Filter & Pencarian -->
+  <div class="control-panel">
+    <!-- Input Search (Pencarian Teks) -->
+    <input 
+      type="text" 
+      id="search-box" 
+      class="search-input" 
+      placeholder="Cari produk di sini..." 
+      oninput="filterDanCariProduk()"
+    />
+
+    <!-- Select Dropdown (Pilihan Kategori) -->
+    <select id="category-select" class="category-select" onchange="filterDanCariProduk()">
+      <option value="semua">Semua Kategori</option>
+      <option value="elektronik">Elektronik</option>
+      <option value="pakaian">Pakaian</option>
+      <option value="aksesoris">Aksesoris</option>
+    </select>
+  </div>
+
+  <!-- Kontainer Produk -->
+  <div id="product-list" class="product-grid"></div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
