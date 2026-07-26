@@ -1,0 +1,340 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f2f4fa;
+    color: #1f2430;
+}
+
+.header {
+    background: linear-gradient(135deg, #3b3fd9 0%, #5a3fe0 60%, #7b3fe4 100%);
+    color: #fff;
+    padding: 28px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    box-shadow: 0 4px 20px rgba(59, 63, 217, 0.25);
+}
+
+.header h1 {
+    font-size: 28px;
+    letter-spacing: 0.5px;
+}
+
+.header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.12);
+    transition: background 0.15s ease;
+}
+
+.header nav a:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px 60px;
+}
+
+.alert {
+    background: #e7f8ee;
+    color: #1a7d43;
+    border: 1px solid #b6ecc9;
+    padding: 12px 18px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ---------- Grid produk ---------- */
+.produk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.produk-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 6px 24px rgba(30, 30, 60, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.produk-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    background: #eef0f7;
+}
+
+.no-image {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef0f7;
+    color: #9aa0b4;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+.produk-card h3 {
+    font-size: 17px;
+    margin-bottom: 6px;
+}
+
+.produk-card .deskripsi {
+    font-size: 13px;
+    color: #5c6178;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.produk-card .harga {
+    font-size: 17px;
+    font-weight: 700;
+    color: #3b3fd9;
+    margin-bottom: 12px;
+}
+
+.inline-form {
+    margin-bottom: 10px;
+}
+
+.aksi {
+    display: flex;
+    gap: 8px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.05s ease, opacity 0.15s ease;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-hijau {
+    background: #2fa84f;
+    color: #fff;
+}
+
+.btn-hijau:hover {
+    background: #268b41;
+}
+
+.btn-kecil {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 13px;
+    background: #eef0f7;
+    color: #3b3fd9;
+}
+
+.btn-kecil:hover {
+    background: #dfe2f2;
+}
+
+.btn-merah {
+    background: #fdeaea;
+    color: #c62828;
+}
+
+.btn-merah:hover {
+    background: #fadadb;
+}
+
+/* ---------- Form (Tambah / Edit Produk) ---------- */
+.form-card {
+    max-width: 480px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 18px;
+    padding: 32px;
+    box-shadow: 0 10px 40px rgba(30, 30, 60, 0.12);
+}
+
+.form-card h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #1f2430;
+    font-size: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d8dae4;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #5a3fe0;
+    box-shadow: 0 0 0 3px rgba(90, 63, 224, 0.15);
+}
+
+.gambar-preview {
+    width: 100%;
+    max-height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #5a3fe0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* ---------- Keranjang ---------- */
+.keranjang-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(30, 30, 60, 0.08);
+}
+
+.keranjang-table th,
+.keranjang-table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eef0f7;
+    font-size: 14px;
+}
+
+.keranjang-table th {
+    background: #f6f7fc;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #5c6178;
+}
+
+.keranjang-table img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.produk-info {
+    display: flex;
+    align-items: center;
+}
+
+.qty-form {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.qty-form input {
+    width: 55px;
+    padding: 6px 8px;
+    border: 1px solid #d8dae4;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.qty-form button {
+    padding: 6px 10px;
+    border: none;
+    background: #eef0f7;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    color: #3b3fd9;
+}
+
+.total-row {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.total-row td {
+    border-bottom: none;
+}
+
+.keranjang-kosong {
+    background: #fff;
+    padding: 40px;
+    text-align: center;
+    border-radius: 14px;
+    color: #5c6178;
+}
+
+.hapus-link {
+    color: #c62828;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.hapus-link:hover {
+    text-decoration: underline;
+}
